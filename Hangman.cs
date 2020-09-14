@@ -11,14 +11,15 @@ namespace KartuvesDatabase
             using (var db = new KartuvesContext())
             {
             
-            bool zaisti = PasirenkaVeiksma(db);
+                 bool zaisti = PasirenkaVeiksma(db);
+                Console.WriteLine("Iveskite savo varda");
+                string vardas = Console.ReadLine();
 
-            while (zaisti)
+                while (zaisti)
             {
                 List<char> spetosRaides = new List<char>();
                 List<string> spetiZodziai = new List<string>();
-                Console.WriteLine("Iveskite savo varda");
-                string vardas = Console.ReadLine();
+
                 var rand = new Random();
 
                 var pasirinkimas = ZmogusPasirenkaZodziuGrupe(out string zodziuGrupe);
